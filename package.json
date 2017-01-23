@@ -21,6 +21,7 @@
     "express": "^4.13.4",
     "express-partials": "^0.3.0",
     "express-session": "^1.13.0",
+    "request": "^2.34.0",
   },
   "devDependencies": {
     "babel-cli": "^6.7.5",
