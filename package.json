@@ -1,5 +1,5 @@
 {
-  "name": "MVP: Putin Quiz",
+  "name": "mvp-putin-quiz",
   "version": "1.1.0",
   "description": "Full Stack MVP Project: Which Putin Are You?",
   "author": "Elizabeth Akerman",
@@ -9,7 +9,7 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash",
+    "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash | bower install",
     "start": "nodemon --ignore node_modules index.js",
     "start:es6": "nodemon --exec node-babel --ignore node_modules index.js",
     "lint": "eslint ./"
