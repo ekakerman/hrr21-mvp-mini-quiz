@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //var app = require('./server-config.js');
 
 app.get('/', function (req, res) {
-  res.sendFile(path.resolve('../public/index.html'));
+  res.sendFile(path.resolve('../client/index.html'));
 });
 
 app.listen(3000, function() {
