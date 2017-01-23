@@ -12,6 +12,7 @@
     "postinstall": "curl -s https://raw.githubusercontent.com/reactorcore/pomander/master/bin/install | bash",
     "start": "nodemon --ignore node_modules index.js",
     "start:es6": "nodemon --exec node-babel --ignore node_modules index.js",
+    "lint": "eslint ./"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
