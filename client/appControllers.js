@@ -1,4 +1,4 @@
-angular.module('app.controllers', [])
+angular.module('app')
 
 .controller('questionCtrl', function($scope, $location, DatabaseRequests) {
   $scope.data = {};
@@ -6,7 +6,7 @@ angular.module('app.controllers', [])
 
   var fetchQuestions = function () {
     DatabaseRequests.getQuestions()
-    console.log('database request successful');
+    //console.log('database request successful')
       .then(function(questions) {
         $scope.data.questions = questions;
       })

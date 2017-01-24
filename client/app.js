@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ngRoute', 'app.services'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/answerA', {
@@ -16,6 +16,10 @@ angular.module('app', ['ngRoute'])
       .when('/answerD', {
         templateUrl: '/partials/answerD.html',
         controller: 'answerDCtrl'
+      })
+      .when('/', {
+        templateUrl: '/partials/questions.html',
+        controller: 'questionCtrl'
       })
       .otherwise({
         redirectTo: '/partials/questions.html'
