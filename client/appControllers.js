@@ -1,5 +1,22 @@
 angular.module('app.answerA', [])
 
+.controller('questionCtrl', function($scope, $location, DatabaseRequests) {
+  $scope.data = {};
+
+  var fetchQuestions = function () {
+    DatabaseRequests.getQuestions()
+      .then(function(questions) {
+        $scope.data.questions = questions;
+      })
+      .catch(function(error) {
+        console.log('ERROR FETCHING QUESTIONS', error)
+      });
+  };
+
+  fetchQuestions();
+})
+
+
 .controller('answerACtrl', function ($scope, $location) {
   $scope.results = 'ANSWER A RESULTS!';
 })
