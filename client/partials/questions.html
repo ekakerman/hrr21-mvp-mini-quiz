@@ -1,4 +1,104 @@
 <div ng-controller="questionCtrl">
-    <p> {{ data.questions }} </p>
-    <p>This totally loaded properly</p>
-</div>
+
+    <p>Question #1: You can have any pet for one day. What do you choose?</p>
+    <form name="question1">
+      <label>
+        <input type="radio" ng-model="answers.Q1" value="C">
+        a golden retriever
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q1" value="B">
+        a fluffy bunny who loves hugs
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q1" value="D">
+        a tigress
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q1" value="A">
+        a velociraptor
+      </label><br/>
+     </form>
+
+    <p>Question #2: What snack could you totally go for right now?</p>
+    <form name="question2">
+      <label>
+        <input type="radio" ng-model="answers.Q2" value="C">
+        gooey macaroni and cheese
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q2" value="D">
+        Champagne and strawberries - preferably dipped in dark chocolate
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q2" value="B">
+        a cupcake with extra fluffy frosting and sprinkles
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q2" value="A">
+        whatever Becky with the good hair is allergic to
+      </label><br/>
+    </form>
+
+    <p>Question #3: Which color matches your mood?</p>
+    <form name="question3">
+      <label>
+        <input type="radio" ng-model="answers.Q3" value="A">
+        black
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q3" value="D">
+        gold
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q3" value="C">
+        blue
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q3" value="B">
+        pink
+      </label><br/>
+    </form>
+
+    <p>Question #4: If you could have lunch with anyone (living or dead), who would you choose?</p>
+    <form name="question4">
+      <label>
+        <input type="radio" ng-model="answers.Q4" value="D">
+        Ryan Gosling or Megan Fox (or both)
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q4" value="B">
+        my childhood dog
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q4" value="C">
+        the brothers I lost during the Great War
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q4" value="A">
+        that journalist who wrote lies about me - and I'm cooking
+      </label><br/>
+    </form>
+
+    <p>Question #5: When you close your eyes, what do your daydreams involve?</p>
+    <form name="question5">
+       <label>
+        <input type="radio" ng-model="answers.Q5" value="B">
+        unicorns and hot chocolate and rainbows
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q5" value="C">
+        listening to the national anthem, bleary-eyed
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q5" value="A">
+        vanquishing my enemies
+      </label><br/>
+      <label>
+        <input type="radio" ng-model="answers.Q5" value="D">
+        that's, um, private
+      </label><br/>
+    </form>
+
+    <button>View Results</button>
+ </div>
