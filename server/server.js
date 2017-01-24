@@ -4,7 +4,6 @@ var path = require('path');
 var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
-//var app = require('./server-config.js');
 
 app.get('/', function (req, res) {
   res.sendFile(path.resolve('../client/index.html'));
