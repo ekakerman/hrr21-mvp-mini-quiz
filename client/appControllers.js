@@ -1,10 +1,12 @@
-angular.module('app', [])
+angular.module('app.controllers', [])
 
 .controller('questionCtrl', function($scope, $location, DatabaseRequests) {
   $scope.data = {};
+  console.log('made it to questions controller');
 
   var fetchQuestions = function () {
     DatabaseRequests.getQuestions()
+    console.log('database request successful');
       .then(function(questions) {
         $scope.data.questions = questions;
       })
@@ -15,6 +17,8 @@ angular.module('app', [])
 
   fetchQuestions();
 })
+
+
 
 
 .controller('answerACtrl', function ($scope, $location) {
