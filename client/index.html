@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app='app'>
   <head>
   <meta charset="utf-8" />
     <title>Putin Quiz</title>
@@ -8,6 +8,9 @@
   <body>
     <h1>Which Putin Are You?</h1>
     <p>Use this mini-quiz to find out!</p>
+
+    <div ng-view></div>
+
     <script src="lib/angular/angular.js"></script>
     <script src="./app.js"></script>
   </body>

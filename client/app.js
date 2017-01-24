@@ -18,6 +18,6 @@ angular.module('app', ['ngRoute'])
         controller: 'answerDCtrl'
       })
       .otherwise({
-        redirectTo: '/invalid.html'
+        redirectTo: '/partials/questions.html'
       });
   })

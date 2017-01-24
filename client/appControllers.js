@@ -1,4 +1,4 @@
-angular.module('app.answerA', [])
+angular.module('app', [])
 
 .controller('questionCtrl', function($scope, $location, DatabaseRequests) {
   $scope.data = {};
