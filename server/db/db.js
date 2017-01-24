@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 mongoURI = 'mongodb://beth:beth@ds127429.mlab.com:27429/heroku_xcgmwn6h'
-mongoose.connect(MONGODB_URI || mongoURI);
+mongoose.connect(process.env.MONGODB_URI || mongoURI);
 
 var db = mongoose.connection;
 
@@ -26,9 +26,6 @@ var getData = function(request, response) {
 };
 
 //var getDataAsync = Promise.promisify(getData);
-
-
-
 // var newQuestion = new Question({
 //   question: 'which Putin are you?',
 //   answer1: 'AnswerA',
@@ -41,8 +38,6 @@ var getData = function(request, response) {
 //   if (err) throw err;
 //   console.log('SUCCESS!!!!!')
 // })
-
-
 
 module.exports = {
   Question: Question,
