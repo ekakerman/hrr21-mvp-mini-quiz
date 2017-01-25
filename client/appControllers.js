@@ -11,7 +11,6 @@ angular.module('app')
   };
 
   $scope.calculateResult = function() {
-    console.log($scope.answers);
     var answersArr = [];
     for (var key in $scope.answers) {
       answersArr.push($scope.answers[key])
@@ -24,8 +23,8 @@ angular.module('app')
     var winner = Object.keys(inv).reduce(function(prev, next) {
       return inv[prev] > inv[next] ? prev : next;
     });
-    console.log(inv);
-    console.log(winner);
+
+    $location.path('/answer' + winner);
   }
 
 })
