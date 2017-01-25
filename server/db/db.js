@@ -29,7 +29,6 @@ var getData = function(request, response) {
   })
 };
 
-
 // var newQuestion = new Question({
 //   question: 'Which Putin are You?',
 //   resultA: 'You\'re Angry KGP Assassin Putin!',

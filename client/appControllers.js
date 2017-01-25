@@ -1,8 +1,6 @@
 angular.module('app')
 
 .controller('questionCtrl', function($scope, $location, DatabaseRequests) {
-  $scope.data = {};
-  console.log('made it to questions controller');
 
   $scope.answers = {
     Q1: '',
@@ -11,11 +9,30 @@ angular.module('app')
     Q4: '',
     Q5: ''
   };
+
+  $scope.calculateResult = function() {
+    console.log($scope.answers);
+    var answersArr = [];
+    for (var key in $scope.answers) {
+      answersArr.push($scope.answers[key])
+    }
+    var inv = answersArr.reduce(function(prev, next) {
+      prev[next] = prev[next] + 1 || 1;
+      return prev;
+    }, {});
+
+    var winner = Object.keys(inv).reduce(function(prev, next) {
+      return inv[prev] > inv[next] ? prev : next;
+    });
+    console.log(inv);
+    console.log(winner);
+  }
+
 })
 
 
 
-.controller('answerACtrl', function ($scope, $location, DatabaseRequests) {
+.controller('answerACtrl', function ($scope, DatabaseRequests) {
   $scope.results = {};
 
   var fetchQuestions = function () {
@@ -30,10 +47,9 @@ angular.module('app')
       });
   };
   fetchQuestions();
-
 })
 
-.controller('answerBCtrl', function ($scope, $location, DatabaseRequests) {
+.controller('answerBCtrl', function ($scope, DatabaseRequests) {
   $scope.results = {};
 
   var fetchQuestions = function () {
@@ -48,10 +64,9 @@ angular.module('app')
       });
   };
   fetchQuestions();
-
 })
 
-.controller('answerCCtrl', function ($scope, $location, DatabaseRequests) {
+.controller('answerCCtrl', function ($scope, DatabaseRequests) {
   $scope.results = {};
 
   var fetchQuestions = function () {
@@ -66,10 +81,9 @@ angular.module('app')
       });
   };
   fetchQuestions();
-
 })
 
-.controller('answerDCtrl', function ($scope, $location, DatabaseRequests) {
+.controller('answerDCtrl', function ($scope, DatabaseRequests) {
   $scope.results = {};
 
   var fetchQuestions = function () {
@@ -84,5 +98,4 @@ angular.module('app')
       });
   };
   fetchQuestions();
-
 })
