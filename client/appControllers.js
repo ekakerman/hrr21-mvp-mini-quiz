@@ -38,8 +38,7 @@ angular.module('app')
     DatabaseRequests.getQuestions()
       .then(function(questions) {
         $scope.results.title = questions[0].resultA;
-        $scope.results.explain = questions[0].explanationA;
-        console.log(questions[0])
+        $scope.results.explain = questions[0].explanationA
       })
       .catch(function(error) {
         console.log('ERROR FETCHING QUESTIONS', error)
@@ -55,8 +54,7 @@ angular.module('app')
     DatabaseRequests.getQuestions()
       .then(function(questions) {
         $scope.results.title = questions[0].resultB;
-        $scope.results.explain = questions[0].explanationB;
-        console.log(questions[0])
+        $scope.results.explain = questions[0].explanationB
       })
       .catch(function(error) {
         console.log('ERROR FETCHING QUESTIONS', error)
@@ -72,8 +70,7 @@ angular.module('app')
     DatabaseRequests.getQuestions()
       .then(function(questions) {
         $scope.results.title = questions[0].resultC;
-        $scope.results.explain = questions[0].explanationC;
-        console.log(questions[0])
+        $scope.results.explain = questions[0].explanationC
       })
       .catch(function(error) {
         console.log('ERROR FETCHING QUESTIONS', error)
@@ -89,8 +86,7 @@ angular.module('app')
     DatabaseRequests.getQuestions()
       .then(function(questions) {
         $scope.results.title = questions[0].resultD;
-        $scope.results.explain = questions[0].explanationD;
-        console.log(questions[0])
+        $scope.results.explain = questions[0].explanationD
       })
       .catch(function(error) {
         console.log('ERROR FETCHING QUESTIONS', error)
